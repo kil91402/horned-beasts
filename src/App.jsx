@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// step 1 import React
+import React from 'react';
+import HornedBeast from './components/HornedBeast';
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Main from './main'
 
-function App() {
-  const [count, setCount] = useState(0)
+// step2 create a component
+class App extends React.Component {
 
-  return (
-    <>
+  render() {
+    return (
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Header />
+        <HornedBeast name="UniWhal" />
+        <HornedBeast name="Rhino Family" />
+        <HornedBeast name="Unicorn Head" />
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    );
+  }
 }
 
-export default App
+
+// step3 export your component
+export default App;
