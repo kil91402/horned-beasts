@@ -4,11 +4,11 @@ class Header extends React.Component {
 
     render() {
         return (
-            <header>
+            <Header>
                 <h1>
                     Horned Beasts
                 </h1>
-            </header>
+            </Header>
         );
     }
 }
