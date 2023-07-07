@@ -1,9 +1,9 @@
 // step 1 import React
 import React from 'react';
 import HornedBeast from './components/HornedBeast';
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Main from './main'
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 
 // step2 create a component
 class App extends React.Component {
@@ -12,10 +12,9 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <HornedBeast name="UniWhal" />
-        <HornedBeast name="Rhino Family" />
-        <HornedBeast name="Unicorn Head" />
-
+        <HornedBeast name="UniWhal" description="A unicorn and a narwhal nuzzling their horns" />
+        <HornedBeast name="Rhino Family" description="Parent rhino with two babies" />
+        <HornedBeast name="Unicorn Head" description="Someone wearing a very silly unicorn head mask" />
       </div>
     );
   }

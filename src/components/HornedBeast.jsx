@@ -6,10 +6,10 @@ import React from 'react';
 class HornedBeast extends React.Component {
     render() {
         return (
-            <div>
+            <><div>
                 <h2>{this.props.name}</h2>
-                <p>hi nice to meet you.</p>
-            </div>
+                <p>{this.props.description}</p>
+            </div></>
         );
     }
 }
