@@ -14,7 +14,7 @@ class App extends React.Component {
         <HornedBeast name="UniWhal" description="A unicorn and a narwhal nuzzling their horns" />
         <HornedBeast name="Rhino Family" description="Parent rhino with two babies" />
         <HornedBeast name="Unicorn Head" description="Someone wearing a very silly unicorn head mask" />
-        <Footer />
+
       </div>
 
     );
