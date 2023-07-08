@@ -21,15 +21,15 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 
 ### Time Estimate
 
-* Number and name of feature: ________________________________
+* Number and name of feature: Lab-02
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 3 hrs
 
-Start time: _____
+Start time: 1:15 pm
 
-Finish time: _____
+Finish time: 5:16 pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 4
 
 ### Feature #1: Display Images
 
