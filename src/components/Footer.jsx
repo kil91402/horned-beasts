@@ -5,9 +5,9 @@ class Footer extends React.Component {
     render() {
         return (
             <footer>
-                <h3>
+                <h2>
                     &copy; Ajamu Page
-                </h3>
+                </h2>
             </footer>
         );
     }

@@ -14,11 +14,9 @@ class Main extends React.Component {
     })
     return (
       <div>
-        <h2>Horned Beasts</h2>
         {beastComponents}
-
       </div>
     )
   }
 }
-export default Main;
+export default Main

@@ -25,4 +25,4 @@ class App extends React.Component {
 
 
 // step3 export your component
-export default App;
+export default App
