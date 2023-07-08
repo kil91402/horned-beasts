@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Main from ''
+import Main from './components/main'
 
 
 // step2 create a component
