@@ -22,9 +22,8 @@ class HornedBeast extends React.Component {
         return (
             <><div>
                 <h2>{this.props.title}</h2>
-                <img onClick={this.handleLikes} />
                 <p>Likes: {this.state.LikesCount}</p>
-                <img src={this.props.imgLink} />
+                <img src={this.props.imgLink} onClick={this.handleLikes} />
                 <p>{this.props.description}</p>
             </div></>
         );
