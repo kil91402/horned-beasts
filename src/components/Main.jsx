@@ -1,6 +1,5 @@
 import React from 'react'
 import HornedBeast from './HornedBeast.jsx'
-import App from '../App.jsx'
 import data from './data.json'
 
 
