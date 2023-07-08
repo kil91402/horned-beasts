@@ -2,7 +2,8 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Main from './components/main'
+import Main from './Main'
+
 
 // step2 create a component
 class App extends React.Component {
