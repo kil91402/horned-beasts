@@ -17,3 +17,42 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 
 ### Reflections and Comments
 
+
+
+### Time Estimate
+
+* Number and name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+### Feature #1: Display Images
+
+* Given that a user opens the application in the browser
+When the user navigates to the home page
+Then the photo gallery should display all of the beasts' images in the gallery.
+
+### Feature #2: Allow Users to Favorite Individual Beasts
+
+* Given that a user opens the application in the browser
+When a user clicks on an image of a beast
+Then the number of "Favorites" displayed on that beast will increase by one.
+
+### Feature 3: Bootstrap
+
+* Given that a user opens the application in the browser
+When the images are displayed on the screen
+Then each image should be rendered in a visually pleasing way: in columns, as screen width allows.
+
+### Stretch Goal: Add Interaction
+
+* Given that a user opens the application in the browser
+    When a user clicks on an item other than the horned beasts, such as the title of the page or the footer,
+    Then the information and styles should change.
+
+    
