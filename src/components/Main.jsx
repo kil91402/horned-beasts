@@ -1,6 +1,9 @@
 import React from 'react'
 import HornedBeast from './HornedBeast.jsx'
 import data from './data.json'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container'
 
 
 class Main extends React.Component {
@@ -9,13 +12,17 @@ class Main extends React.Component {
     let beastComponents = [];
     data.forEach((beast) => {
       beastComponents.push(
-        <HornedBeast title={beast.title} description={beast.description} imgLink={beast.image_url} />
+        <Col xs={3}>
+          <HornedBeast title={beast.title} description={beast.description} imgLink={beast.image_url} />
+        </Col>
       )
     })
     return (
-      <div>
-        {beastComponents}
-      </div>
+      <Container>
+        <Row>
+          {beastComponents}
+        </Row>
+      </Container>
     )
   }
 }
