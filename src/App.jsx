@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import Main from './components/Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 // step2 create a component
 class App extends React.Component {
 
