@@ -8,7 +8,6 @@ import data from './data.json'
 
 class SelectedBeast extends React.Component {
 
-
     render() {
         const { beast, show, handleShow, handleClose } = this.props;
         return (

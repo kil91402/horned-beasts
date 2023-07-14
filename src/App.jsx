@@ -15,18 +15,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       beast: data,
-      Image: data.image_url,
       show: true,
       selectedBeast: null,
     };
   }
-
-  handleClick = () => {
-    const { Image } = this.state;
-    const randomIndex = Math.floor(Math.random() * Image.length);
-    const randomImage = Image[randomIndex].url;
-    this.setState({ current: randomImage, showModal: true });
-  };
 
   handleShowModal = () => {
     this.setState({ show: true });
@@ -38,18 +30,12 @@ class App extends React.Component {
 
 
   render() {
-    const { current, beast, selectedBeast } = this.state;
+    const { beast, selectedBeast } = this.state;
 
     return (
       <div>
         {beast.map((beast) => (
           <div key={beast._id} onClick={() => this.handleShowModal(beast)}>
-            <button onClick={this.handleClick} />
-            <div className="modal">
-              <span className="close" onClick={this.handleCloseModal}>&times;</span>
-              <img src={Image} alt="Random Picture" />
-            </div>
-
           </div>
         )
         )}
