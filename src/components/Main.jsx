@@ -3,6 +3,7 @@ import HornedBeast from './HornedBeast.jsx'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container'
+import data from './data.json'
 
 
 class Main extends React.Component {
@@ -11,7 +12,7 @@ class Main extends React.Component {
     let beastComponents = [];
     data.forEach((beast) => {
       beastComponents.push(
-        <Col xs={3}>
+        <Col key={beast._id} xs={3}>
           <HornedBeast title={beast.title} description={beast.description} imgLink={beast.image_url} />
         </Col>
       )
