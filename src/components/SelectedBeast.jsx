@@ -24,7 +24,7 @@ class SelectedBeast extends React.Component {
                         </Modal.Header>
                         <Modal.Body>
                             <div>
-                                <img src={data.imgLink} alt={data.title} />
+                                <img src={data.ImgLink} alt={data.title} />
                                 <p>{data.description}</p>
                             </div>
                         </Modal.Body>

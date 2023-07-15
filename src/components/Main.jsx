@@ -13,7 +13,7 @@ class Main extends React.Component {
     data.forEach((beast) => {
       beastComponents.push(
         <Col key={beast._id} xs={3}>
-          <HornedBeast title={beast.title} description={beast.description} imgLink={beast.image_url} />
+          <HornedBeast title={beast.title} description={beast.description} ImgLink={beast.image_url} handleShowModal={this.props.handleShowModal} />
         </Col>
       )
     })
