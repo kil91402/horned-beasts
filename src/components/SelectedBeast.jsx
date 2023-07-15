@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import data from './data.json'
 
-
 class SelectedBeast extends React.Component {
 
     render() {
@@ -24,8 +23,8 @@ class SelectedBeast extends React.Component {
                         </Modal.Header>
                         <Modal.Body>
                             <div>
-                                <img src={data.ImgLink} alt={data.title} />
-                                <p>{data.description}</p>
+                                <img src={beast.image_url} alt={beast.title} />
+                                <p>{beast.description}</p>
                             </div>
                         </Modal.Body>
                         <Modal.Footer>

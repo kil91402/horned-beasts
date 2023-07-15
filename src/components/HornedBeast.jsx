@@ -19,8 +19,8 @@ class HornedBeast extends React.Component {
         });
     };
 
-    handleClickImage = (event) => {
-        this.props.handleShowModal(this.props.ImgLink, this.props.description);
+    handleClick = () => {
+        this.props.handleShowModal(this.props.beast)
     }
 
     render() {
@@ -29,7 +29,7 @@ class HornedBeast extends React.Component {
             <Card style={{ width: '18rem' }}>
                 <Card.Title onClick={this.handleLikes}>{this.props.title}</Card.Title>
                 <p>Likes: {this.state.LikesCount}</p>
-                <Card.Img src={this.props.ImgLink} onClick={this.handleClickImage} />
+                <Card.Img src={this.props.ImgLink} onClick={this.handleClick} />
                 <Card.Text>{this.props.description}</Card.Text>
             </Card>
         );

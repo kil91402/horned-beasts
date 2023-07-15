@@ -17,16 +17,16 @@ class App extends React.Component {
     this.state = {
       beast: data,
       show: true,
-      selectedBeast: null,
+      selectedBeast: {},
       filteredBy: "numberOfHorns"
     };
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    let Horns = `${event.target.numHorns.value}`;
+    let horns = `${event.target.numHorns.value}`;
     this.setState({
-      beast: [...this.state.beast, Horns]
+      beast: [...this.state.beast]
     });
   }
 
@@ -34,11 +34,12 @@ class App extends React.Component {
     let value = event.target.value;
     this.setState({
       filteredBy: value
-    })
+    });
   }
 
-  handleShowModal = () => {
-    this.setState({ show: true });
+  handleShowModal = (beast) => {
+    this.setState({ selectedBeast: beast, show: true });
+
   };
 
   handleCloseModal = () => {
@@ -48,12 +49,13 @@ class App extends React.Component {
 
   render() {
     const { beast, selectedBeast } = this.state;
+    console.log(this.state.selectedBeast);
 
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="numberOfHorns"> Search: </label>
-          <input type="text" Horns="numberOfHorns" />
+          <input type="text" horns="numberOfHorns" />
           <button type="submit">Go</button>
           <select onChange={this.handleSelect} value={this.state.filteredBy}>
             <option value="all">All</option>
@@ -64,12 +66,10 @@ class App extends React.Component {
           </select>
         </form>
 
-        {beast.map((beast) => (
-          <div key={beast._id} onClick={() => this.handleShowModal(beast)}>
-          </div>
-        )
-        )}
-        <SelectedBeast beast={this.state.beast} show={this.state.show} handleShow={this.handleShowModal} handleClose={this.handleCloseModal} />
+        <SelectedBeast beast={this.state.selectedBeast}
+          show={this.state.show}
+          handleShowModal={this.handleShowModal}
+          handleClose={this.handleCloseModal} />
         <Header />
         <Footer />
         <Main handleShowModal={this.handleShowModal} />
