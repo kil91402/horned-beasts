@@ -9,6 +9,7 @@ import data from './data.json'
 class Main extends React.Component {
 
   render() {
+    console.log(this.props.filteredBy);
     let beastComponents = [];
     data.forEach((beast) => {
       beastComponents.push(
