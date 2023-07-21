@@ -48,16 +48,16 @@ class App extends React.Component {
 
 
   render() {
-    let filteredHorns = this.state.beast;
+    let filteredHorns = this.state.beast
     if (this.state.filteredBy === "All") {
-      filteredHorns = this.state.beast.filter((value) => value[0] === "All");
+      filteredHorns = this.state.beast;
     } else if (this.state.filteredBy === "1") {
-      filteredHorns = this.state.beast.filter((value) => value[0] === "1");
+      filteredHorns = this.state.beast.filter((beast) => beast.horns === 1);
+    } else if (this.state.filteredBy === "2") {
+      filteredHorns = this.state.beast.filter((beast) => beast.horns === 2);
+    } else if (this.state.filteredBy === "100") {
+      filteredHorns = this.state.beast.filter((beast) => beast.horns === 100);
     }
-    let numHorns = this.state.beast.map((value) => <Main>{value}</Main>);
-    const { beast, selectedBeast } = this.state;
-    //console.log(this.state.selectedBeast);
-
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -79,7 +79,7 @@ class App extends React.Component {
           handleClose={this.handleCloseModal} />
         <Header />
         <Footer />
-        <Main handleShowModal={this.handleShowModal} filteredBy={this.state.filteredBy} />
+        <Main handleShowModal={this.handleShowModal} beastData={filteredHorns} />
 
       </div>
 
