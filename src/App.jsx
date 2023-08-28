@@ -63,7 +63,7 @@ class App extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
   <label htmlFor="numberOfHorns"> Search: </label>
-  <input type="text" horns="filteredBy" /> 
+  <input type="text" filteredBy="filteredBy" /> 
   <button type="submit">Go</button>
   <select onChange={this.handleSelect} value={this.state.filteredBy}>
     <option value="all">All</option>

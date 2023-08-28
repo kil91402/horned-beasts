@@ -7,28 +7,28 @@ import data from './data.json'
 
 
 class Main extends React.Component {
-
   render() {
-    console.log(this.props.filteredBy);
     let beastComponents = [];
     data.forEach((beast) => {
-      beastComponents.push(
-        <Col key={beast._id} xs={3}>
-          <HornedBeast title={beast.title}
-            description={beast.description}
-            ImgLink={beast.image_url}
-            handleShowModal={this.props.handleShowModal}
-            beast={beast} />
-        </Col>
-      )
-    })
+      if (this.props.filteredBy === "All" || beast.horns === parseInt(this.props.filteredBy)) {
+        beastComponents.push(
+          <Col key={beast._id} xs={3}>
+            <HornedBeast
+              title={beast.title}
+              description={beast.description}
+              ImgLink={beast.image_url}
+              handleShowModal={this.props.handleShowModal}
+              beast={beast}
+            />
+          </Col>
+        );
+      }
+    });
     return (
       <Container>
-        <Row>
-          {beastComponents}
-        </Row>
+        <Row>{beastComponents}</Row>
       </Container>
-    )
+    );
   }
 }
-export default Main
+export default Main;
