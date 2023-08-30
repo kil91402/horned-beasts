@@ -55,7 +55,9 @@ class App extends React.Component {
       filteredHorns = this.state.beast.filter((beast) => beast.horns === 1);
     } else if (this.state.filteredBy === "2") {
       filteredHorns = this.state.beast.filter((beast) => beast.horns === 2);
-    } else if (this.state.filteredBy === "100") {
+    } else if (this.state.filteredBy === "3") {
+      filteredHorns = this.state.beast.filter((beast) => beast.horns === 3);
+    }  else if (this.state.filteredBy === "100") {
       filteredHorns = this.state.beast.filter((beast) => beast.horns === 100);
     }
     return (
