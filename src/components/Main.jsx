@@ -24,22 +24,7 @@ class Main extends React.Component {
       );
     }
   );
-        return (
-    data.forEach((beast) => {
-      if (this.props.filteredBy === "All" || beast.horns === parseInt(this.props.filteredBy)) {
-        beastComponents.push(
-          <Col key={beast._id} xs={3}>
-            <HornedBeast
-              title={beast.title}
-              description={beast.description}
-              ImgLink={beast.image_url}
-              handleShowModal={this.props.handleShowModal}
-              beast={beast}
-            />
-          </Col>
-        );
-      }
-    });
+       
     return (
       <Container>
         <Row>{beastComponents}</Row>
