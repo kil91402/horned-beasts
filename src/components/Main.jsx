@@ -11,6 +11,7 @@ class Main extends React.Component {
   render() {
     console.log(this.props.filteredBy);
     let beastComponents = [];
+    
     this.props.beastData.forEach((beast) => {
       beastComponents.push(
         <Col key={beast._id} xs={3}>
@@ -25,8 +26,7 @@ class Main extends React.Component {
       );
     }
   );
-   
-    return (
+        return (
       <Container>
         <Row>
           {beastComponents}
