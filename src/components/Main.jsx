@@ -9,7 +9,6 @@ import data from './data.json'
 class Main extends React.Component {
   render() {
     let beastComponents = [];
-    
     this.props.beastData.forEach((beast) => {
       beastComponents.push(
         <Col key={beast._id} xs={3}>
@@ -24,8 +23,7 @@ class Main extends React.Component {
       );
     }
   );
-       
-    return (
+  return (
       <Container>
         <Row>{beastComponents}</Row>
       </Container>
