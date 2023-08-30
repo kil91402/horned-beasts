@@ -11,6 +11,20 @@ class Main extends React.Component {
   render() {
     console.log(this.props.filteredBy);
     let beastComponents = [];
+    this.props.beastData.forEach((beast) => {
+      beastComponents.push(
+        <Col key={beast._id} xs={3}>
+          <HornedBeast
+            title={beast.title}
+            description={beast.description}
+            ImgLink={beast.image_url}
+            handleShowModal={this.props.handleShowModal}
+            beast={beast}
+          />
+        </Col>
+      );
+    }
+  );
     
     this.props.beastData.forEach((beast) => {
       beastComponents.push(
