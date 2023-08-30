@@ -24,11 +24,12 @@ class App extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    let horns = `${event.target.numHorns.value}`;
+    let filteredBy = event.target.filteredBy.value; 
     this.setState({
-      beast: [...this.state.beast]
+      filteredBy: filteredBy
     });
   }
+  
 
   handleSelect = (event) => {
     let value = event.target.value;
@@ -63,17 +64,17 @@ class App extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="numberOfHorns"> Search: </label>
-          <input type="text" horns="numberOfHorns" />
-          <button type="submit">Go</button>
-          <select onChange={this.handleSelect} value={this.state.filteredBy}>
-            <option value="all">All</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="100">100</option>
-          </select>
-        </form>
+  <label htmlFor="numberOfHorns"> Search: </label>
+  <input type="text" filteredBy="filteredBy" /> 
+  <button type="submit">Go</button>
+  <select onChange={this.handleSelect} value={this.state.filteredBy}>
+    <option value="all">All</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="100">100</option>
+  </select>
+</form>
 
         <SelectedBeast beast={this.state.selectedBeast}
           show={this.state.show}
